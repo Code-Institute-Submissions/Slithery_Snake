@@ -117,3 +117,6 @@ while True:
         new_segment.color("grey")
         new_segment.penup()
         segments.append(new_segment)
+
+        # Shorten the delay
+        delay -= 0.001
