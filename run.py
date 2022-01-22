@@ -160,3 +160,6 @@ while True:
         
             # Reset the Score
             score = 0
+
+            # Reset the Delay
+            delay = 0.1
