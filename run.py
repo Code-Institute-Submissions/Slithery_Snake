@@ -76,3 +76,7 @@ wn.onkeypress(go_up, "w")
 wn.onkeypress(go_down, "s")
 wn.onkeypress(go_left, "a")
 wn.onkeypress(go_right, "d")
+
+# Main Game Loop
+while True:
+    wn.update()
