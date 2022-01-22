@@ -90,3 +90,6 @@ while True:
         # Hide the segments
         for segment in segments:
             segment.goto(1000, 1000)
+
+        # Clear the segments list
+        segments.clear()
