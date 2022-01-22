@@ -46,9 +46,9 @@ pen.goto(0, 260)
 pen.write("Score: 0  High Score: 0", align="center")
 
 # Functions
-def go_up():  
+def go_up():
     if head.direction != "down":
-        head.direction = "up"
+        head.direction = "up"      
 
 
 def go_down():
@@ -84,10 +84,18 @@ def move():
         head.setx(x + 20)
 
 # Keyboard bindings
-wn.listen()
+wn.listen() 
+
+
 wn.onkeypress(go_up, "w")
+
+
 wn.onkeypress(go_down, "s")
+
+
 wn.onkeypress(go_left, "a")
+
+
 wn.onkeypress(go_right, "d")
 
 # Main Game Loop
@@ -95,9 +103,9 @@ while True:
     wn.update()
 
     # Check for collision with the border
-    if head.xcor()>290 or head.xcor()<-290 or head.ycor()>290 or head.ycor()<-290:
+    if head.xcor() > 290 or head.xcor() < - 290 or head.ycor() > 290 or head.ycor() < - 290:
         time.sleep(1)
-        head.goto(0,0)
+        head.goto(0, 0)
         head.direction = "stop"
 
         # Hide the segments
@@ -116,12 +124,12 @@ while True:
         pen.clear()
         pen.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal")) 
 
- # Check for a collision with the food
+# Check for a collision with the food
     if head.distance(food) < 20:
         # Move the food to a random spot
         x = random.randint(-290, 290)
         y = random.randint(-290, 290)
-        food.goto(x,y)
+        food.goto(x, y)
 
         # Add a segment
         new_segment = turtle.Turtle()
@@ -153,7 +161,7 @@ while True:
     if len(segments) > 0:
         x = head.xcor()
         y = head.ycor()
-        segments[0].goto(x,y)
+        segments[0].goto(x, y)
 
     move()  
 
@@ -161,16 +169,16 @@ while True:
     for segment in segments:
         if segment.distance(head) < 20:
             time.sleep(1)
-            head.goto(0,0)
+            head.goto(0, 0)
             head.direction = "stop"
 
             # Hide The Segments
             for segment in segments:
-                segment.goto(1000,1000)
+                segment.goto(1000, 1000)
 
             # Clear the Segments List
             segments.clear()
-        
+       
             # Reset the Score
             score = 0
 
