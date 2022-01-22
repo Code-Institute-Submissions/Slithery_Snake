@@ -93,3 +93,6 @@ while True:
 
         # Clear the segments list
         segments.clear()
+
+        # Reset the score
+        score = 0
