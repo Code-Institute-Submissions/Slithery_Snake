@@ -15,3 +15,13 @@ wn.title("Sneaky Snake")
 wn.bgcolor("blue")
 wn.setup(width=600, height=600)
 wn.tracer(0)
+
+# Snake food
+food = turtle.Turtle()
+food.speed(0)
+food.shape("square")
+food.color("yellow")
+food.penup()
+food.goto(0,100)
+
+segments = []
