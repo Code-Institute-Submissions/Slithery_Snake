@@ -80,3 +80,9 @@ wn.onkeypress(go_right, "d")
 # Main Game Loop
 while True:
     wn.update()
+
+    # Check for collision with the border
+    if head.xcor()>290 or head.xcor()<-290 or head.ycor()>290 or head.ycor()<-290:
+        time.sleep(1)
+        head.goto(0,0)
+        head.direction = "stop"
