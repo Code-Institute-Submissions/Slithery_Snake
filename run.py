@@ -154,3 +154,7 @@ while True:
             # Hide The Segments
             for segment in segments:
                 segment.goto(1000,1000)
+
+            # Clear the Segments List
+            segments.clear()
+
