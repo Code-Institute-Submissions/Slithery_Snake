@@ -45,10 +45,11 @@ pen.hideturtle()
 pen.goto(0, 260)
 pen.write("Score: 0  High Score: 0", align="center")
 
+
 # Functions
 def go_up():
     if head.direction != "down":
-        head.direction = "up"      
+        head.direction = "up"
 
 
 def go_down():
@@ -83,19 +84,12 @@ def move():
         x = head.xcor()
         head.setx(x + 20)
 
+
 # Keyboard bindings
-wn.listen() 
-
-
+wn.listen()
 wn.onkeypress(go_up, "w")
-
-
 wn.onkeypress(go_down, "s")
-
-
 wn.onkeypress(go_left, "a")
-
-
 wn.onkeypress(go_right, "d")
 
 # Main Game Loop
@@ -122,7 +116,10 @@ while True:
         delay = 0.1
 
         pen.clear()
-        pen.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal")) 
+        pen.write(
+            "Score: {}  High Score: {}".format(
+                score, high_score), align="center", font=(
+                    "Courier", 24, "normal"))
 
 # Check for a collision with the food
     if head.distance(food) < 20:
@@ -149,7 +146,10 @@ while True:
             high_score = score
 
         pen.clear()
-        pen.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal")) 
+        pen.write(
+            "Score: {}  High Score: {}".format(
+                score, high_score), align="center", font=(
+                    "Courier", 24, "normal"))
 
     # Move the end segments first in reverse order
     for index in range(len(segments)-1, 0, -1):
@@ -163,7 +163,7 @@ while True:
         y = head.ycor()
         segments[0].goto(x, y)
 
-    move()  
+    move()
 
     # Check for head collison with body parts
     for segment in segments:
@@ -178,7 +178,7 @@ while True:
 
             # Clear the Segments List
             segments.clear()
-       
+
             # Reset the Score
             score = 0
 
@@ -187,8 +187,11 @@ while True:
 
             # Update the Score Display
             pen.clear()
-            pen.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
-    
+            pen.write(
+                "Score: {}  High Score: {}".format(
+                    score, high_score), align="center", font=(
+                        "Courier", 24, "normal"))
+
     time.sleep(delay)
 
 wn.mainloop()
