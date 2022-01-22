@@ -120,3 +120,13 @@ while True:
 
         # Shorten the delay
         delay -= 0.001
+
+        # Increase the score
+        score += 10
+
+        if score > high_score:
+            high_score = score
+
+        pen.clear()
+        pen.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal")) 
+
