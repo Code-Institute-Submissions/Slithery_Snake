@@ -157,4 +157,6 @@ while True:
 
             # Clear the Segments List
             segments.clear()
-
+        
+            # Reset the Score
+            score = 0
