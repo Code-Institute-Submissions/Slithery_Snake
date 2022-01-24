@@ -1,31 +1,37 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Drinking memory-game #
 
-Welcome EmmaNoelles,
+[View the live site here](https://slithering-snakes.herokuapp.com/)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+![mockup](../assets/sneaky-snake.jpg)
 
-## Reminders
+---
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+### Introduction & Project Goals ###
 
-## Creating the Heroku app
+Its the old snake game we used to all play on our nokia blocks.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## UX ##
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### User Stories ###  
+As a User, I want:
+* Attractive colours that are easy to see.
+* Easily legible writing.
+* Simple rules.
+* A way to win.
+* Play easily.
+* See my highscore.
+* Have fun while playing.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+### User Goals ###  
+*  The user wants to have fun.
+*  The user wants to see their high score.
+*  The user wants to win.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### Site Owner Goals ###  
+* The site owner wants the user to have fun.
+* The site owner wants the user to be able to easily use the app.
 
-Connect your GitHub repository and deploy as normal.
+### Credit ###  
 
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+Game code: [wynand1004](https://gist.github.com/wynand1004/ec105fd2f457b10d971c09586ec44900)
+    

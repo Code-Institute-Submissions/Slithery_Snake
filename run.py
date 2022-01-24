@@ -67,22 +67,27 @@ def go_right():
         head.direction = "right"
 
 
-def move():
-    if head.direction == "up":
-        y = head.ycor()
-        head.sety(y + 20)
+def jls_extract_def(y, x):
+    def move():
+        if head.direction == "up":
+            y = head.ycor()
+            head.sety(y + 20)
+    
+        if head.direction == "down":
+            y = head.ycor()
+            head.sety(y - 20)
+    
+        if head.direction == "left":
+            x = head.xcor()
+            head.setx(x - 20)
+    
+        if head.direction == "right":
+            x = head.xcor()
+            head.setx(x + 20)
+    return x, y, move
 
-    if head.direction == "down":
-        y = head.ycor()
-        head.sety(y - 20)
 
-    if head.direction == "left":
-        x = head.xcor()
-        head.setx(x - 20)
-
-    if head.direction == "right":
-        x = head.xcor()
-        head.setx(x + 20)
+x, y, move = jls_extract_def(y, x)
 
 
 # Keyboard bindings
